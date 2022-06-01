@@ -1,0 +1,478 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Semibold.eot');
+  src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap'); /*font-family: 'El Messiri', sans-serif;*/
+
+body {
+  background-color: #162831;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  color: white;
+}
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(60px,auto) 1fr minmax(50px,auto) / 1fr;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer";
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 30px 20px 0;
+}
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template: 1fr / 60px 50% 155px ;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.header__logo {}
+.header__menu {
+}
+.header__list {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: 14px;
+  line-height: 135%;
+}
+.header__link {
+  color: white;
+  margin-right: 10px;
+}
+.header__burger {}
+.header__btn {
+  padding: 9px 15px;
+  background-color: #018ABE;
+  font-size: 13px;
+  line-height: 140%;
+
+}
+.header__btn a {
+  color: white;
+}
+.content {
+  grid-area: content;
+}
+.content__label {
+  margin-bottom: 150px;
+}
+.label {
+}
+.label__body {
+  border-radius: 10px;
+  background: url('../img/content/__label.jpg') center/cover no-repeat;
+  padding: 0 0 45% 0;
+  position: relative;
+}
+.label__sup-title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+}
+.label__sup-title::before {
+  display: inline-block;
+  width: 28px;
+  height:20px;
+  content: '';
+  background: url('../img/content/icons/before.png') center no-repeat;
+  padding-right: 66px;
+}
+.label__sup-title::after {
+  width: 28px;
+  height:20px;
+  content: '';
+  background: url('../img/content/icons/after.png') center no-repeat;
+  display: inline-block;
+  padding-left: 66px;
+}
+.label__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 140%;
+  text-align: center;
+}
+.content__seance {
+  margin-bottom: 150px;
+}
+.seance {}
+
+.title {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 140%;
+  text-align: center;
+
+}
+.seance__title {
+  margin-bottom: 100px;
+}
+.title::before {
+  display: inline-block;
+  width: 28px;
+  height:20px;
+  content: '';
+  background: url('../img/content/icons/before-blue.png') center no-repeat;
+  padding-right: 66px;
+}
+.title::after {
+  width: 28px;
+  height:20px;
+  content: '';
+  background: url('../img/content/icons/after-blue.png') center no-repeat;
+  display: inline-block;
+  padding-left: 66px;
+}
+.seance__items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(258px,1fr));
+  gap: 24px;
+
+  
+}
+.seance__item {
+  background: url('../img/content/seance/__item.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 0 0 60% 0;
+  border-radius: 11px;
+}
+.seance__text {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  max-width: 336px;
+  position: absolute;
+  bottom: 10%;
+  left: 30px;
+}
+.seance__item-big {
+  background: url('../img/content/seance/item-big.png') center/cover no-repeat;
+  grid-row: span 2;
+}
+.content__comment {
+  margin-bottom: 150px;
+}
+.comment {}
+.comment__title {
+  margin-bottom: 100px;
+}
+
+.slider__wrapper {
+  background: #018ABE;
+  border-radius: 10px;
+}
+.slider__item {
+
+}
+.slider__item_title {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+.slider__item_text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+}
+.slider__item_body {
+  padding: 50px 60px 0;
+  height: 350px;
+}
+.content__about {
+  margin-bottom: 150px;
+}
+.about {
+  width: 82.77%;
+  margin: 0 auto 150px;
+
+}
+.about__title {  margin-bottom: 100px;}
+.about__items {
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(358px,1fr));
+  row-gap: 100px;
+  column-gap: 24px;
+}
+about__item {
+
+  overflow: hidden;
+}
+
+.about__item_text-top {
+  padding: 60px 60px 0 0;
+}
+.about__item_text-bottom {
+  padding: 17px 0 0 60px;
+}
+
+.about__item_img {
+  background: url('../img/content/about/__item_img.jpg') center/cover no-repeat;
+  border-radius: 11px;
+  padding: 0 0 60% 0;
+}
+
+.item {}
+.item__title {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+.item__text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 160%;
+}
+.pay {  
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+.pay__title {
+  margin-bottom: 100px;
+}
+.pay__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 25% 25% 50%;
+}
+.pay__name {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  margin-right: 20px;
+  min-width: 250px;
+}
+
+.pay__check li, .pay__name li {
+  margin-bottom: 31px;
+}
+
+.pay__name li::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 9px;
+  background: url('../img/content/icons/before-blue.png') 0 -2px/cover no-repeat;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.pay__check {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  margin-right: 20px;
+}
+.pay__image_picture {
+  margin-bottom: 20px;
+}
+.pay__image_picture img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.pay__image_title {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 140%;
+  text-align: center;
+}
+.content__places {
+  margin-bottom: 90px;
+}
+.places {
+  display: grid;
+  grid-template-columns: 60% minmax(250px,1fr);
+  gap: 48px;
+}
+.places__cart {}
+.places__pulls {}
+.pulls {}
+.pull {
+  padding: 35px 0 35px 45px;
+  background: #018ABE;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+.pull__title {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+.pull__text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+}
+.pull__text div {
+  margin-bottom: 21px;
+  padding-left: 30px;
+}
+.pull__address {
+  background: url('../img/content/places/__address.png') left center/contain no-repeat;
+}
+.pull__metro {
+  background: url('../img/content/places/__metro.png') left center/contain no-repeat;
+}
+.pull__record {
+  background: url('../img/content/places/__record.png') left center/contain no-repeat;
+}
+.pull__btn {
+  display: inline-block;
+  padding: 9px 11px;
+  background-color: white;
+}
+.pull__btn a {
+  color: #018ABE;
+
+}
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+.footer__copy {}
+.footer__text {}
